@@ -53,6 +53,7 @@ p {
 	left: 0;
 	position: fixed;
 	color: white;
+	z-index: 11;
 }
 .header-bg {
 	background-color: #373a3c;
@@ -68,6 +69,7 @@ p {
 
 .nav-main{
 	height: 3em;
+	z-index: 11;
 	width: 100%;
 	background-color: #fff;
 	box-shadow: 0 0 10px -2px #000;
