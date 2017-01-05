@@ -124,7 +124,12 @@ p {
 @media only screen and (min-width: 769px) {
 	
 .header {
-	
+	height: 5em;
+}
+.header-logo {
+	margin-left: 5em;
+	height: 90%;
+	margin-top: 0.5em;
 }
 
 .footer {
@@ -132,6 +137,7 @@ p {
 }
 
 .nav-main {
+	height: 5em;
 	top: 0;
 	bottom: auto;
 	box-shadow: 0 0 0;
@@ -150,13 +156,13 @@ p {
 
 .nav-link {
 	font-size: 24px;
+	color: #fff;
 }
 .nav-link div {
 	height: 100%;
 }
 .nav-link p {
 	font-size: 1em;
-	color: #fff;
 	padding: 25px 40px 0 40px;
 }
 
