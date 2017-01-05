@@ -1,0 +1,163 @@
+@charset "utf-8";
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img, object, embed, video {
+	max-width: 100%;
+}
+
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+	width:100%;
+}
+* {
+	box-sizing: border-box;
+}
+*::before, *::after {
+    box-sizing: border-box;
+}
+
+.fluid {
+	clear: both;
+	margin-left: 0;
+	width: 100%;
+	float: left;
+	display: block;
+}
+
+body {
+	margin: 3em 0;
+}
+ul li {
+	list-style: none;
+}
+p {
+	font-size: 19px;
+}
+
+.row {
+	display: table;
+	box-sizing: inherit;
+	width: 100%;
+}
+
+.gray-bg {
+	background-color: #f4f4f4;
+}
+
+.header {
+	height: 3em;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	color: white;
+}
+.header-bg {
+	background-color: #373a3c;
+}
+.header-logo {
+	margin-left: 2em;
+	height: 90%;
+	margin-top: 0.2em;
+}
+.footer {
+	height: 3em;
+}
+
+.nav-main{
+	height: 3em;
+	width: 100%;
+	background-color: #fff;
+	box-shadow: 0 0 10px -2px #000;
+	bottom: 0;
+	position: fixed;
+}
+.nav--main-top {
+	color: #fff;
+	text-align: center;
+	height: 100%;
+}
+.nav-bar {
+	float: none;
+	margin: 0;
+	padding: 0;
+	display: block;
+	height: 100%;
+}
+.nav-bar > li.on > a {
+	color: #1296db;
+}
+.nav-item {
+	float: left;
+	height: 100%;
+	width: 25%;
+}
+.nav-link {
+	display: block;
+	height: 100%;
+	text-decoration: none;
+	color: #515151;
+}
+.nav-a-img {
+	padding-top: 0.4em;
+	width: 1.6em;
+	height: 1.6em;
+	
+}
+.nav-link p {
+	font-size: 0.75em;
+	margin: 0;
+	padding-top: 0.1em;
+}
+
+
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+
+@media only screen and (min-width: 481px) {
+	
+}
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 769px) {
+	
+.header {
+	
+}
+
+.footer {
+	height: 0em;
+}
+
+.nav-main {
+	top: 0;
+	bottom: auto;
+	box-shadow: 0 0 0;
+	background-color: transparent;
+}
+.nav--main-top {
+	margin: 0 auto;
+	width: 512px;
+}
+.nav-item {
+	width: auto;
+}
+.nav-a-img {
+	display: none;
+}
+
+.nav-link {
+	font-size: 24px;
+}
+.nav-link div {
+	height: 100%;
+}
+.nav-link p {
+	font-size: 1em;
+	color: #fff;
+	padding: 25px 40px 0 40px;
+}
+
+}
