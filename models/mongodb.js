@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 var db = mongoose.connect('mongodb://localhost:27017/myweb', function(err, db) {
-	console.log("连接成功");
+	console.log("connect mongodb sucess!");
 });
 
 exports.mongoose = mongoose;
