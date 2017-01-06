@@ -9,8 +9,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Untitled Document</title>
-<link href="css/style.css" rel="stylesheet" type="text/css">
-<link href="css/bloglist.css" rel="stylesheet" type="text/css">
+<link href="/css/style.css" rel="stylesheet" type="text/css">
+<link href="/css/bloglist.css" rel="stylesheet" type="text/css">
 <!-- 
 To learn more about the conditional comments around the html tags at the top of the file:
 paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
@@ -29,7 +29,7 @@ Do the following if you're using your customized build of modernizr (http://www.
 <div class="fluid fluidList">
 	<div class="row">
         <div class="header header-bg">
-			<img class="header-logo" src="images/logo.png"/>
+			<img class="header-logo" src="/images/logo.png"/>
         </div>
     </div>
 	
@@ -57,114 +57,6 @@ Do the following if you're using your customized build of modernizr (http://www.
 			
 			<div class="blog-list">
 				<ul>
-					<li>
-						<a class="blog-item" href="#">
-							<img src="http://i9.hexunimg.cn/2016-11-28/187088313.jpg"/>
-							<div class="blog-info">
-								<h2>区块链——新社会</h2>
-								<div class="detail-info">
-									<em class="blog-time">19:16</em>
-									<em class="blog-read">1916</em>
-								</div>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a class="blog-item" href="#">
-							<img src="http://i9.hexunimg.cn/2016-11-28/187088313.jpg"/>
-							<div class="blog-info">
-								<h2>区块链——新社会信用体系的建立</h2>
-								<div class="detail-info">
-									<em class="blog-time">19:16</em>
-									<em class="blog-read">1916</em>
-								</div>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a class="blog-item" href="#">
-							<img src="http://i9.hexunimg.cn/2016-11-28/187088313.jpg"/>
-							<div class="blog-info">
-								<h2>区块链——新社会信用体系的建立</h2>
-								<div class="detail-info">
-									<em class="blog-time">19:16</em>
-									<em class="blog-read">1916</em>
-								</div>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a class="blog-item" href="#">
-							<img src="http://i9.hexunimg.cn/2016-11-28/187088313.jpg"/>
-							<div class="blog-info">
-								<h2>区块链——新社会信用体系的建立</h2>
-								<div class="detail-info">
-									<em class="blog-time">19:16</em>
-									<em class="blog-read">1916</em>
-								</div>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a class="blog-item" href="#">
-							<img src="http://i9.hexunimg.cn/2016-11-28/187088313.jpg"/>
-							<div class="blog-info">
-								<h2>区块链——新社会信用体系的建立</h2>
-								<div class="detail-info">
-									<em class="blog-time">19:16</em>
-									<em class="blog-read">1916</em>
-								</div>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a class="blog-item" href="#">
-							<img src="http://i9.hexunimg.cn/2016-11-28/187088313.jpg"/>
-							<div class="blog-info">
-								<h2>区块链——新社会信用体系的建立</h2>
-								<div class="detail-info">
-									<em class="blog-time">19:16</em>
-									<em class="blog-read">1916</em>
-								</div>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a class="blog-item" href="#">
-							<img src="http://i9.hexunimg.cn/2016-11-28/187088313.jpg"/>
-							<div class="blog-info">
-								<h2>区块链——新社会信用体系的建立</h2>
-								<div class="detail-info">
-									<em class="blog-time">19:16</em>
-									<em class="blog-read">1916</em>
-								</div>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a class="blog-item" href="#">
-							<img src="http://i9.hexunimg.cn/2016-11-28/187088313.jpg"/>
-							<div class="blog-info">
-								<h2>区块链——新社会信用体系的建立</h2>
-								<div class="detail-info">
-									<em class="blog-time">19:16</em>
-									<em class="blog-read">1916</em>
-								</div>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a class="blog-item" href="#">
-							<img src="http://i9.hexunimg.cn/2016-11-28/187088313.jpg"/>
-							<div class="blog-info">
-								<h2>区块链——新社会信用体系的建立</h2>
-								<div class="detail-info">
-									<em class="blog-time">19:16</em>
-									<em class="blog-read">1916</em>
-								</div>
-							</div>
-						</a>
-					</li>
 				</ul>
 			</div>
 		</div>
@@ -180,22 +72,59 @@ Do the following if you're using your customized build of modernizr (http://www.
 </div>
 
 	<!-- load JS files -->
-	<script src="js/jquery-1.11.3.min.js"></script>
-	
-<script>
+	<script src="/js/jquery-3.1.1.min.js"></script>
+	<!-- <script src="/js/jquery.mobile-1.4.5.min.js"></script> -->
 
-	$('.list-header ul li').on('click',function(){
-      if(!$(this).hasClass('on')){
-        var index = $('.list-header ul li.on').removeClass('on').index();
-        $(this).addClass('on');
-        <!-- moveTab('.school_lunbo',$(this).index()); -->
-      }
-    });
-    function moveTab(cls,num){
-      var w = $(cls).find('li').width();
-      var ul = $(cls).find('ul');
-      ul.animate({left:-w*num+'px'});
+<script>
+	
+	function moveTab(cls,num){
+		<!-- var w = $(cls).find('li').width(); -->
+		var ul = $(cls).find('ul');
+		<!-- ul.animate({left:-w*num+'px'}); -->
+		$(cls).find('li').remove();
+		var url = 'http://' + window.location.hostname + '/blog/list?id=' + num + '&rand=' + parseInt(Math.random()*1000);
+		$.ajax({
+			type: "GET",
+			url: url,
+			dataType: "json",
+			jsonp: "callback",
+			success: function(json){
+				console.log(json);
+				var blogs = json.blogs;//根据后台传递过来的数据生成html内容。
+				blogs.forEach(function(blog){
+					var blogItem = 
+						'<li>\
+							<a class="blog-item" href="http://' + window.location.hostname + '/blog/article?blogId=' + blog.blogId + '">\
+								<img src="' + blog.coverImage + '"/>\
+								<div class="blog-info">\
+									<h2>' + blog.title + '</h2>\
+									<div class="detail-info">\
+										<em class="blog-time">' + blog.datetime + '</em>\
+										<em class="blog-read">' + blog.read + '</em>\
+									</div>\
+								</div>\
+							</a>\
+						</li>'
+					ul.append(blogItem);//内容添加到页面上。
+				})	
+			},
+			error: function(){
+				alert('fails');
+			}
+		});
     }
+	
+	$(function () {
+		moveTab('.blog-list', 0);
+	});
+	
+	$('.list-header ul li').on('click',function(){
+		if(!$(this).hasClass('on')){
+			var index = $('.list-header ul li.on').removeClass('on').index();
+			$(this).addClass('on');
+			moveTab('.blog-list', $(this).index());
+		}
+    });
 
 </script>
 
