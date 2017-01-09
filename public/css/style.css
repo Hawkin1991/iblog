@@ -27,7 +27,8 @@ img, object, embed, video {
 }
 
 body {
-	margin: 3em 0;
+	margin: 0 0 3em 0;
+	background-color: #FAFAFA;
 }
 ul li {
 	list-style: none;
@@ -46,23 +47,24 @@ p {
 	background-color: #f4f4f4;
 }
 
-.header {
+header {
 	height: 3em;
 	width: 100%;
 	top: 0;
-	left: 0;
 	position: fixed;
+	display: none;
 	color: white;
 	z-index: 11;
 }
 .header-bg {
-	background-color: #373a3c;
+	background-color: #2196F3;
 }
 .header-logo {
 	margin-left: 2em;
 	height: 90%;
 	margin-top: 0.2em;
 }
+
 .footer {
 	height: 2em;
 }
@@ -89,7 +91,7 @@ p {
 	height: 100%;
 }
 .nav-bar > li.on > a {
-	color: #1296db;
+	color: #2196F3;
 }
 .nav-item {
 	float: left;
@@ -124,8 +126,13 @@ p {
 /* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
 
 @media only screen and (min-width: 769px) {
-	
-.header {
+
+body {
+	margin: 5em 0 0 0;
+}
+
+header {
+	display: block;
 	height: 5em;
 }
 .header-logo {
@@ -158,10 +165,14 @@ p {
 
 .nav-link {
 	font-size: 24px;
-	color: #fff;
+	color: #ffffff;
 }
 .nav-link div {
 	height: 100%;
+}
+.nav-bar > li.on > a {
+	background-color: #FFFFFF;
+	color: #2196F3;
 }
 .nav-link p {
 	font-size: 1em;

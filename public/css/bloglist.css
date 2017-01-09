@@ -1,5 +1,5 @@
 .tm-contain {
-	max-width: 1200px;
+	max-width: 1000px;
 	width: 100%;
 	margin: 0 auto;
     position: relative;
@@ -8,11 +8,13 @@
 }
 
 .list-header {
-	top: 4em;
-	margin: 0 auto 1em auto;
-	max-width: 1200px;
+	width: 100%;
 	padding: 0;
+	height: 3em;
+	background-color: #2196F3;
+	color: #fff;
 	display: table;
+	position: fixed;
 	/* position: relative; */
 	/* z-index:11; */
 	/* border-bottom:1px solid #656571; */
@@ -21,29 +23,37 @@
 	position:relative;
 	float:left;
 	text-align: center;
-	color:#000;
 	font-size: 1em;
-	height: 1.8em;
-	line-height: 1.8em;
-	margin-bottom:-2px;
+	/* height: 1.8em; */
+	/* line-height: 1.8em; */
+	/* margin-bottom:-2px; */
 	cursor:pointer;
 }
 .list-header ul {
+	height: 100%;
+	display: table;
+	margin: 0;
 	padding: 0;
 }
 .list-header li {
+	height: 100%;
 	padding: 0 0.5em;
 	margin: 0;
-	display: inline-block;
+	display: table;
+	/* display: inline-block; */
 }
-.list-header li:before{
+.list-header div {
+	display: table-cell;
+	vertical-align: middle;
+}
+.list-header li.on:before{
 	content: '';
 	width: 0;
 	height: 3px;
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	background: #c01000;
+	background: #fff;
   -webkit-transition: all .3s; /* Safari 和 Chrome */
      -moz-transition: all .3s; /* Firefox 4 */
        -o-transition: all .3s; /* Opera */
@@ -52,24 +62,35 @@
 .list-header li:hover:before, .list-header li.on:before {
 	width: 100%;
 }
-.list-header li.on{
-	color:#c01000;
+.list-blank {
+	margin-bottom: 3em;
+}
+
+#poster {
+	margin: 0;
+}
+
+#poster img {
+	margin: 0;
+	width: 100%;
+	display: table;
 }
 
 .blog-list {
-	
+	margin: 0;
 }
 .blog-list ul li a {
 	position: relative;
 	display: table;
-	margin: 0;
 }
 .blog-list ul {
+	margin: 0;
 	padding: 0;
 }
 .blog-list li {
 	padding: 0;
-	border-bottom: 1px solid #ddd;
+	margin: 0;
+	border-bottom: 1px solid #BDBDBD;
 }
 .blog-list a {
 	padding: 0.8em;
@@ -81,17 +102,18 @@
 	
 }
 .blog-item img {
+	border-radius: 2px;
 	float: left;
 	margin-right: 1em;
-	width: 4em;
-	height: 3em;
+	width: 5.2em;
+	height: 3.9em;
 }
 .blog-item h2 {
-	width: 18em;
+	width: 14em;
 	text-align: left;
 	margin: 0;
 	padding: 0;
-	font-size: 0.85em;
+	font-size: 1em;
 	float: top;
 }
 
@@ -131,8 +153,71 @@
 
 @media only screen and (min-width: 769px) {
 
-.tm-contain {
-	margin-top: 2em;
+.list-header {
+	margin: 0 0;
+	height: auto;
+	position: static;
+	background-color: transparent;
+	color: #212121;
+	font-size: 1.3em;
+}
+.list-header ul {
+	padding: 0;
+	height: auto;
+	margin: 0;
+	display: table;
+}
+.list-header li {
+	padding: 0;
+	height: auto;
+	margin: 1.5em 1em;
+	display: table;
+}
+.list-header li:before {
+	width: 0;
+	/* position: absolute; */
+	background: transparent;
+}
+.list-header li:hover:before, .list-header li.on:before {
+	width: 100%;
+}
+.list-header div {
+	padding: 0.5em 1em;
+	border-width: 0;
+	margin: 0 0 5px 0;
+	/* height: 2em; */
+	display: block;
+}
+.list-blank {
+	display: none;
 }
 
+.list-header-bar > li.on > div {
+	background-color: #FF4081;
+	border-radius: 5px;
+	color: #FFFFFF;
+}
+
+.blog-list a {
+	padding: 0.8em;
+	font-size: 1.5em;
+}
+
+.blog-list li {
+	padding: 0;
+	margin: 10px 0;
+	background: #FFFFFF;
+	border-bottom: none;
+	box-shadow: 0 0 3px -2px #000;
+}
+.blog-item img {
+	border-radius: 2px;
+	float: left;
+	margin-right: 1em;
+	/* width: 4em; */
+	/* height: 3em; */
+}
+.blog-item h2 {
+	width: 20em;
+}
 }

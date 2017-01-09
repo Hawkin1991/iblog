@@ -1,0 +1,83 @@
+.tm-section {
+    overflow: auto;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+.tm-container {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.tm-title {
+	font-size: 3em;
+    margin-bottom: 40px;
+}
+
+.text-xs-center {
+	text-align: center !important;
+}
+
+.blue-text {
+    color: #006699;
+}
+
+.tm-img-grid {
+	margin: 60px 20px;
+    overflow: auto;
+}
+
+.tm-gallery-img-container {
+    float: left;
+    max-width: 300px;
+    width: 25%;
+}
+
+.info-person {
+	align-items: center;
+	display: flex;
+    flex-direction: column;
+    height: 20em;
+    justify-content: center;
+	text-align: center;
+	background: rgba(0, 0, 0, 0) url("../img/homebg.jpg") no-repeat fixed left top / 100% 30em;
+	color: white;
+}
+
+.head-logo {
+	width: 6em;
+	height: 6em;
+	border-radius: 3em;
+	margin-bottom: 1em;
+}
+
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+
+@media only screen and (min-width: 481px) {
+	
+}
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 769px) {
+
+.tm-text {
+	font-size: 1.5em;
+}
+
+.tm-img-grid {
+	margin: 60px 0px;
+    overflow: auto;
+}
+
+.info-person {
+	height: 40em;
+	background: rgba(0, 0, 0, 0) url("../img/homebg.jpg") no-repeat fixed left top / 100% 50em;
+}
+
+.head-logo {
+	width: 8em;
+	height: 8em;
+	border-radius: 4em;
+}
+
+}

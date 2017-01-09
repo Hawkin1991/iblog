@@ -29,20 +29,13 @@ Do the following if you're using your customized build of modernizr (http://www.
 <body>
 	<div class="fluid fluidList">
 		<div class="row">
-			<div class="header header-bg">
-				<img class="header-logo" src="/images/logo.png"/>
-			</div>
+			
+			<% include nav-main.html %>
 		</div>
 		
 		<div class="row">			
 			<div class="markdown-body">
-				<h2 id="title"></h1>
-				<em>时间：</em>
-				<em id="datetime"></em>
-				<div style="padding: 0 2em 0 0; float: right;">
-					<em>阅读：</em>
-					<em id="read"></em>
-				</div>
+				<p id="title"></p>
 				<div id="content" >
 				
 				</div>
@@ -53,8 +46,6 @@ Do the following if you're using your customized build of modernizr (http://www.
 			<div class="footer">
 				
 			</div>
-			
-			<% include nav-main.html %>
 		</div>
 	</div>
 
@@ -74,8 +65,6 @@ Do the following if you're using your customized build of modernizr (http://www.
 			jsonp: "callback",
 			success: function(json){
 				$('#title').append(json.blog.title);
-				$('#datetime').append(json.blog.datetime);
-				$('#read').append(json.blog.read);
 				$('#content').append(json.content);//内容添加到页面上。
 			},
 				error: function(){

@@ -27,34 +27,36 @@ Do the following if you're using your customized build of modernizr (http://www.
 </head>
 <body>
 <div class="fluid fluidList">
-	<div class="row">
-        <div class="header header-bg">
-			<img class="header-logo" src="/images/logo.png"/>
-        </div>
+	<div class="row">        
+		<% include nav-main.html %>
     </div>
 	
 	<div class="row">
 		<div class="tm-contain">
 			<div class="list-header">
-				<ul>
+				<ul class="list-header-bar">
 					<li class="on">
-						最新
+						<div>全部</div>
 					</li>
 					<li>
-						机器学习
+						<div>机器学习</div>						
 					</li>
 					<li>
-						区块链
+						<div>区块链</div>						
 					</li>
 					<li>
-						物联网
+						<div>物联网</div>						
 					</li>
 					<li>
-						杂文
+						<div>杂文</div>						
 					</li>
 				</ul>
 			</div>
-			
+			<div class="list-blank">
+			</div>
+			<div id="poster">
+				
+			</div>
 			<div class="blog-list">
 				<ul>
 				</ul>
@@ -66,8 +68,6 @@ Do the following if you're using your customized build of modernizr (http://www.
         <div class="footer">
         	
         </div>
-        
-		<% include nav-main.html %>
     </div>
 </div>
 
@@ -81,6 +81,7 @@ Do the following if you're using your customized build of modernizr (http://www.
 		<!-- var w = $(cls).find('li').width(); -->
 		var ul = $(cls).find('ul');
 		<!-- ul.animate({left:-w*num+'px'}); -->
+		$("#poster").find('img').remove();
 		$(cls).find('li').remove();
 		var url = 'http://' + window.location.hostname + '/blog/list?id=' + num + '&rand=' + parseInt(Math.random()*1000);
 		$.ajax({
@@ -89,8 +90,9 @@ Do the following if you're using your customized build of modernizr (http://www.
 			dataType: "json",
 			jsonp: "callback",
 			success: function(json){
-				console.log(json);
+				<!-- console.log(json); -->
 				var blogs = json.blogs;//根据后台传递过来的数据生成html内容。
+				$("#poster").append('<img src="' + blogs[0].coverImage + '"/>');
 				blogs.forEach(function(blog){
 					var blogItem = 
 						'<li>\
@@ -105,6 +107,10 @@ Do the following if you're using your customized build of modernizr (http://www.
 								</div>\
 							</a>\
 						</li>'
+					ul.append(blogItem);//内容添加到页面上。
+					ul.append(blogItem);//内容添加到页面上。
+					ul.append(blogItem);//内容添加到页面上。
+					ul.append(blogItem);//内容添加到页面上。
 					ul.append(blogItem);//内容添加到页面上。
 				})	
 			},

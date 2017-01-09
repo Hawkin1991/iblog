@@ -1,7 +1,8 @@
 #title {
 	text-align: center;
+	font-size: 1.5em;
+	text-decoration: none;
 }
-
 
 @font-face {
 	font-family: octicons-link;
@@ -9,9 +10,9 @@
 }
 
 .markdown-body {
-	max-width: 1200px;
+	max-width: 1000px;
 	margin: 1em auto 2em auto;
-	padding: 0 1em;
+	padding: 1em 1em;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 	line-height: 1.5;
@@ -704,7 +705,7 @@
 
 @media only screen and (min-width: 769px) {
 	.markdown-body {
-		margin: 5em auto;
+		margin: 0 auto;
 	}
 	#title {
 		font-size: 2em;

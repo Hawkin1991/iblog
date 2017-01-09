@@ -42,7 +42,7 @@ router.get('/article', function(req, res, next) {
 				return;
 			}
 			blog.read += 1;
-			var contentMd = fs.readFileSync('../views/blogs/' + params.blogId + '.md', 'utf8');
+			var contentMd = fs.readFileSync('./views/blogs/' + params.blogId + '.md', 'utf8');
 			var content = Markdown.makeHtml(contentMd);
 			res.status(200).json({
 				blog: blog,

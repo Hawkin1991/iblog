@@ -10,6 +10,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Untitled Document</title>
 <link href="/css/style.css" rel="stylesheet" type="text/css">
+<link href="/css/home.css" rel="stylesheet" type="text/css">
+<link href="/css/person-info.css" rel="stylesheet" type="text/css">
 <!-- 
 To learn more about the conditional comments around the html tags at the top of the file:
 paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
@@ -27,19 +29,130 @@ Do the following if you're using your customized build of modernizr (http://www.
 <body>
 <div class="fluid fluidList">
 	<div class="row">
-        <div class="header header-bg">
-			<img class="header-logo" src="/images/logo.png"/>
-        </div>
+        <% include nav-main.html %>
     </div>
+	
+	<div class="row">
+    	<div class="info-person">
+        	<section>
+            	<div class="">
+					<img  class="head-logo" src="img/head.jpg">
+				</div>
+			</section>
+		</div>
+    </div>
+	<div class="row gray-bg">
+		<section id="tm-section-2" class="tm-section">
+			<div class="tm-container text-xs-center">
+				<h2 class="blue-text tm-title">技能</h2>
+			</div>
+				
+			<div class="tm-container">
+				<div class="prg-cont" title="c sharp" barColor="#35AFBA" initValue="85" style="float: left; margin: 1em;"></div>
+				<div class="prg-cont" title="Java" barColor="#FF6060" initValue="70" style="float: left; margin: 1em;"></div>
+				<div class="prg-cont" title="erlang" barColor="#3AD079" initValue="80" style="float: left; margin: 1em;"></div>
+				<div class="prg-cont" title="python" barColor="#58C0E3" initValue="40" style="float: left; margin: 1em;"></div>
+			</div>
+		</section>
+	</div>
+	
+	<div class="row">
+		<section class="tm-section">
+			<div class="tm-container text-xs-center">
+				<h2 class="blue-text tm-title">骑行</h2>
+				<p class="margin-b-5">后轮爱上前轮</p>
+				<p class="margin-b-5">却永远不能和她在一起</p>
+				<p>于是他吻遍了她滚过的每一寸土地</p>
+				<div class="tm-img-grid">
+					<img class="img-fluid tm-banner-img" alt="Image" src="img/bike.jpg"/>
+				</div>
+			</div>
+		</section>
+	</div>
+	
+	<div class="row gray-bg">
+		<section class="tm-section">
+			<div class="tm-container text-xs-center">
+				<h2 class="blue-text tm-title">朋友</h2>
+				<p class="margin-b-5">青山在，人未老，同学情正浓</p>
+				<p>岁月增，水长流，情怀依旧深</p>
+				<div class="tm-img-grid">
+					
+				</div>
+			</div>
+		</section>
+	</div>
+	
+	<!-- <div class="row"> -->
+		<!-- <section class="tm-section"> -->
+			<!-- <div class="tm-container text-xs-center"> -->
+				<!-- <h2 class="blue-text tm-title">联系我</h2> -->
+				<!-- <ul class="soc_list_2"> -->
+					<!-- <li class="span2"> -->
+						<!-- <div><a href="#"><img src="images/qq-logo-small.png" alt=""></a></div> -->
+					<!-- </li> -->
+					<!-- <li class="span2"> -->
+						<!-- <div><a href="#"><img src="images/wechat-logo-small.png" alt=""></a></div> -->
+					<!-- </li> -->
+				<!-- </ul> -->
+			<!-- </div> -->
+		<!-- </section> -->
+	<!-- </div> -->
 	
     <div class="row">
         <div class="footer">
         	
-        </div>
-        
-		<% include nav-main.html %>
+        </div>        
     </div>
 </div>
+
+<script src="js/jquery-3.1.1.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
+<script type="text/javascript"  src="js/gauge/base.js"></script>
+<script src="js/gauge/radialindicator.js"></script>
+
+<script>
+$(function () {
+	
+	$('.prg-cont').each(function () {
+		var obj = $(this);		
+		obj.radialIndicator({
+			title: obj.attr("title"),
+			barColor: obj.attr("barColor"),
+			radius: 80,
+			barWidth: 16,
+			initValue: 0,
+			percentage: true
+		});
+    });
+	
+	var target = $("#tm-section-2").offset().top - $(window).height();
+	var flag = true;
+	
+	if($(window).scrollTop() >= target && flag) {
+		$('.prg-cont').each(function () {
+			var obj = $(this);
+			var radObj = obj.data('radialIndicator');
+			radObj.animate(obj.attr("initValue"));
+		});
+			lag = false;
+	};
+	
+	$(window).resize(function(){
+		target = $("#tm-section-2").offset().top - $(window).height();
+	});
+	
+	$(window).scroll(function(){
+		if($(this).scrollTop() >= target && flag) {
+			$('.prg-cont').each(function () {
+				var obj = $(this);
+				var radObj = obj.data('radialIndicator');
+				radObj.animate(obj.attr("initValue"));
+			});
+			flag = false;
+		}
+	});
+});
+</script>
 
 </body>
 </html>
