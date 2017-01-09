@@ -106,17 +106,18 @@ Do the following if you're using your customized build of modernizr (http://www.
     </div>
 </div>
 
-<script src="js/jquery-3.1.1.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
-<script type="text/javascript"  src="js/gauge/base.js"></script>
-<script src="js/gauge/radialindicator.js"></script>
+<script src="/js/jquery-3.1.1.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
+<script type="text/javascript"  src="/js/gauge/base.js"></script>
+<script src="/js/gauge/radialindicator.js"></script>
 
 <script>
 $(function () {
 	
 	$('.prg-cont').each(function () {
-		$(this).radialIndicator({
-			title: $(this).attr("title"),
-			barColor: $(this).attr("barColor"),
+		var obj = $(this);		
+		obj.radialIndicator({
+			title: obj.attr("title"),
+			barColor: obj.attr("barColor"),
 			radius: 80,
 			barWidth: 16,
 			initValue: 0,
