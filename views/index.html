@@ -115,8 +115,8 @@ $(function () {
 	
 	$('.prg-cont').each(function () {
 		$(this).radialIndicator({
-			title: obj.attr("title"),
-			barColor: obj.attr("barColor"),
+			title: $(this).attr("title"),
+			barColor: $(this).attr("barColor"),
 			radius: 80,
 			barWidth: 16,
 			initValue: 0,
