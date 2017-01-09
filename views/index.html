@@ -114,8 +114,7 @@ Do the following if you're using your customized build of modernizr (http://www.
 $(function () {
 	
 	$('.prg-cont').each(function () {
-		var obj = $(this);		
-		obj.radialIndicator({
+		$(this).radialIndicator({
 			title: obj.attr("title"),
 			barColor: obj.attr("barColor"),
 			radius: 80,
