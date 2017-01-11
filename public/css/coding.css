@@ -1,0 +1,349 @@
+/* custom light solarize theme for public use  in .sass format
+ *
+ * Name:  Matthew
+ * Email:   imagineux@gmail.com
+ * 
+ */
+
+.pln {
+  color: #bd3613;
+}
+
+.str {
+  color: #269186;
+}
+
+.kwd {
+  color: #859900;
+}
+
+.com {
+  color: #586175;
+  font-style: italic;
+}
+
+.typ {
+  color: #b58900;
+}
+
+.lit {
+  color: #2aa198;
+}
+
+.pun {
+  color: #839496;
+}
+
+.opn {
+  color: #839496;
+}
+
+.clo {
+  color: #839496;
+}
+
+.tag {
+  color: #268bd2;
+}
+
+.atn {
+  color: #586175;
+}
+
+.atv {
+  color: #2aa198;
+}
+
+.dec {
+  color: #268bd2;
+}
+
+.var {
+  color: #268bd2;
+}
+
+.fun {
+  color: red;
+}
+
+/* Put a border around
+ * printed code snippets. */
+pre.prettyprint {
+	margin:0;
+	padding: 1.8em 5em;
+}
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums {
+  color: #4c666c;
+  overflow: hidden;
+}
+
+ol.linenums li {
+	max-width: 15em;
+  line-height: 1.2em;
+  margin: 0 0 0.3125em 0.75em;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.linenums > li {
+	opacity: 1;
+	white-space: nowrap;
+	overflow: hidden;
+	border-right: 1px solid transparent;
+}
+.codeanimation > li:nth-child(1) {
+  -webkit-animation: typingMod1 3s steps(26, end), blink-caret 1s step-end 3s;
+  animation: typingMod1 3s steps(26, end), blink-caret 1s step-end 3s;
+}
+.codeanimation > li:nth-child(2) {
+  -webkit-animation: typingMod2 3s steps(28, end), blink-caret 1s step-end 3s;
+  animation: typingMod2 3s steps(28, end), blink-caret 1s step-end 3s;
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+  -webkit-animation-fill-mode: backwards;
+  animation-fill-mode: backwards;
+}
+.codeanimation > li:nth-child(3) {
+  -webkit-animation: typingMod3 0.1s steps(1, end), blink-caret 1s step-end 2s;
+  animation: typingMod3 0.1s steps(1, end), blink-caret 1s step-end 2s;
+  -webkit-animation-delay: 6s;
+  animation-delay: 6s;
+  -webkit-animation-fill-mode: backwards;
+  animation-fill-mode: backwards;
+}
+.codeanimation > li:nth-child(4) {
+  -webkit-animation: typingMod4 2s steps(12, end), blink-caret 1s step-end 2s;
+  animation: typingMod4 2s steps(12, end), blink-caret 1s step-end 2s;
+  -webkit-animation-delay: 6.1s;
+  animation-delay: 6.1s;
+  -webkit-animation-fill-mode: backwards;
+  animation-fill-mode: backwards;
+}
+.codeanimation > li:nth-child(5) {
+  -webkit-animation: typingMod5 2s steps(9, end), blink-caret 1s step-end 2s;
+  animation: typingMod5 2s steps(9, end), blink-caret 1s step-end 2s;
+  -webkit-animation-delay: 8.1s;
+  animation-delay: 8.1s;
+  -webkit-animation-fill-mode: backwards;
+  animation-fill-mode: backwards;
+}
+.codeanimation > li:nth-child(6) {
+  -webkit-animation: typingMod6 3s steps(12, end), blink-caret-last 1s step-end infinite;
+  animation: typingMod6 3s steps(12, end), blink-caret-last 1s step-end infinite;
+  -webkit-animation-delay: 10.1s;
+  animation-delay: 10.1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes typingMod1 {
+  from {
+	  border-color: black;
+    width: 0%;
+  }
+
+  to {
+	  border-color: black;
+    width: 12em;
+  }
+}
+@keyframes typingMod1 {
+  from {
+	  border-color: black;
+    width: 0%;
+  }
+
+  to {
+	  border-color: black;
+    width: 12em;
+  }
+}
+@-webkit-keyframes typingMod2 {
+  from {
+	  border-color: black;
+    width: 0%;
+  }
+
+  to {
+	  border-color: black;
+    width: 14em;
+  }
+}
+@keyframes typingMod2 {
+  from {
+	  border-color: black;
+    width: 0%;
+  }
+
+  to {
+	  border-color: black;
+    width: 14em;
+  }
+}
+@-webkit-keyframes typingMod3 {
+  from {
+	  border-color: black;
+    width: 0%;
+  }
+
+  to {
+	  border-color: black;
+    width: 1em;
+  }
+}
+@keyframes typingMod3 {
+  from {
+	  border-color: black;
+    width: 0%;
+  }
+
+  to {
+	  border-color: black;
+    width: 1em;
+  }
+}
+@-webkit-keyframes typingMod4 {
+  from {
+	  border-color: black;
+    width: 0%;
+  }
+
+  to {
+	  border-color: black;
+    width: 6em;
+  }
+}
+@keyframes typingMod4 {
+  from {
+	  border-color: black;
+    width: 0%;
+  }
+
+  to {
+	  border-color: black;
+    width: 6em;
+  }
+}
+@-webkit-keyframes typingMod5 {
+	from {
+		border-color: black;
+		width: 0%;
+	}
+
+  to {
+	  border-color: black;
+    width: 4.5em;
+  }
+}
+@keyframes typingMod5 {
+  from {
+	  border-color: black;
+    width: 0%;
+  }
+
+  to {
+	  border-color: black;
+    width: 4.5em;
+  }
+}
+@-webkit-keyframes typingMod6 {
+  from {
+	  border-color: black;
+	  width: 1.5em;
+  }
+
+  to {
+	  border-color: black;
+    width: 7.5em;
+  }
+}
+@keyframes typingMod6 {
+  from {
+	  border-color: black;
+    width: 1.5em;
+  }
+
+  to {
+	  border-color: black;
+    width: 7.5em;
+  }
+}
+
+@-webkit-keyframes blink-caret {
+  from, to {
+	border-color: transparent;
+  }
+
+  50% {
+    border-color: transparent;
+  }
+}
+@keyframes blink-caret {
+  from, to {
+	border-color: transparent;
+  }
+
+  50% {
+    border-color: transparent;
+  }
+}
+
+@-webkit-keyframes blink-caret-last {
+  to {
+	border-color: transparent;
+  }
+
+  50% {
+    border-color: black;
+  }
+}
+@keyframes blink-caret-last {
+  to {
+	border-color: transparent;
+  }
+
+  50% {
+    border-color: black;
+  }
+}
+
+.code-editor {
+	position: relative;
+	width: 38.4em;
+	top: 30%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 21.6em;
+	background: rgba(0, 0, 0, 0) url("../img/SurfaceStudio.jpg") no-repeat left top / 38.4em 21.6em;
+}
+
+pre.numbers {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 0;
+  opacity: 0.65;
+}
+
+code.css {
+  display: flex-direction;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.code-editor, .code-editor * {
+	font-size: 20px;
+}
