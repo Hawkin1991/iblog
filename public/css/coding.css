@@ -345,5 +345,21 @@ code.css {
 }
 
 .code-editor, .code-editor * {
-	font-size: 20px;
+	font-size: 25px;
+}
+
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+
+@media only screen and (min-width: 481px) {
+	
+}
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 769px) {
+
+	.code-editor, .code-editor * {
+		font-size: 20px;
+	}
+
 }

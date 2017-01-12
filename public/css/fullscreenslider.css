@@ -1,10 +1,13 @@
-html.fssopen, html.fssopen body{ /* class added to HTML element when full screen slider is open to hide potential body scrollbars */
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-  margin: 0;
-	overflow: hidden;
+/* html.fssopen, html.fssopen body{ /* class added to HTML element when full screen slider is open to hide potential body scrollbars */ */
+	/* width: 100%; */
+	/* height: 100%; */
+	/* top: 0; */
+	/* left: 0; */
+  /* margin: 0; */
+	/* overflow: hidden; */
+/* } */
+section.fullscreenslider, section.fullscreenslider * {
+	/* border-box: border-box; */
 }
 
 section.fullscreenslider{
@@ -13,8 +16,7 @@ section.fullscreenslider{
 	top: 0;
 	width: 100%;
 	height: 100%;
-  z-index: 2000;
-	font-size: 16px; /* base font size */
+	z-index: 10;
 	visibility: visible;
 	overflow: hidden;
 }
@@ -101,11 +103,12 @@ section.fullscreenslider article.slide .scrollable{ /* Assign this class to elem
 }
 
 section.fullscreenslider article.slide a{
-	color: yellow;
+	color: #FFFFFF;
 }
 
 section.fullscreenslider article.slide{
-	background: #E56464;
+	/* background: #E56464; */
+	background: #16a085;
 }
 section.fullscreenslider article.slide:nth-of-type(2){ /* 2nd demo slide bgcolor */
 	background: #22AFE2;
@@ -113,7 +116,7 @@ section.fullscreenslider article.slide:nth-of-type(2){ /* 2nd demo slide bgcolor
 }
 
 section.fullscreenslider article.slide:nth-of-type(3){ /* 3rd demo slide bgcolor */
-	background: #A36400;
+	background: #E56464;
 	/* background: #88D332; */
 }
 
