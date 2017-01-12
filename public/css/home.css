@@ -11,6 +11,83 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+header {
+	opacity: 0.2;
+	z-index: 11;
+	top: 0;
+	left: 0;
+	position: fixed;
+	height: 80px;
+	width: 100%;
+}
+
+.header-bg {
+	background-color: #FFFFFF;
+}
+.header-logo {
+	margin-left: 2em;
+	height: 90%;
+	margin-top: 0.2em;
+}
+
+.footer {
+	height: 2em;
+}
+
+.nav-main{
+	height: 3em;
+	z-index: 11;
+	width: 100%;
+	background-color: #fff;
+	box-shadow: 0 0 10px -2px #000;
+	bottom: 0;
+	left:0;
+	position: fixed;
+}
+.nav-main, .nav-main * {
+	font-size: 20px;
+}
+.nav--main-top {
+	color: #FFFFFF;
+	text-align: center;
+	height: 100%;
+}
+.nav-bar {
+	float: none;
+	margin: 0;
+	padding: 0;
+	display: block;
+	height: 100%;
+}
+.nav-bar li {
+	list-style: none;
+}
+.nav-bar > li.on > a {
+	color: #2196F3;
+}
+.nav-item {
+	float: left;
+	height: 100%;
+	width: 25%;
+}
+.nav-link {
+	display: block;
+	height: 100%;
+	text-decoration: none;
+	color: #515151;
+}
+.nav-a-img {
+	padding-top: 0.4em;
+	width: 1.6em;
+	height: 1.6em;
+	
+}
+.nav-link p {
+	font-size: 0.75em;
+	margin: 0;
+	padding-top: 0.1em;
+}
+
 /* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
 
 @media only screen and (min-width: 481px) {
@@ -21,5 +98,56 @@ body {
 
 @media only screen and (min-width: 769px) {
 
+
+header {
+	display: block;
+	height: 80px;
+}
+.header-logo {
+	margin-left: 5em;
+	height: 90%;
+	margin-top: 0.5em;
+}
+
+.footer {
+	height: 0em;
+}
+
+.nav-main {
+	height: 80px;
+	top: 0;
+	bottom: auto;
+	box-shadow: 0 0 0;
+	background-color: transparent;
+}
+.nav--main-top {
+	margin: 0 auto;
+	width: 512px;
+}
+.nav-item {
+	width: auto;
+}
+.nav-a-img {
+	display: none;
+}
+
+.nav-link {
+	color: #ffffff;
+}
+.nav-link div {
+	height: 100%;
+}
+.nav-bar a {	
+	opacity: 0.4;
+}
+.nav-bar > li.on > a {
+	opacity: 1;
+	color: #FFFFFF;
+}
+.nav-link p {
+	font-size: 1.2em;
+	padding: 25px 40px 0 40px;
+	margin: 0;
+}
 
 }

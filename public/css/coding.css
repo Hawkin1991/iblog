@@ -315,11 +315,11 @@ ol.linenums li {
 .code-editor {
 	position: relative;
 	width: 38.4em;
-	top: 30%;
+	top: 25%;
 	margin-left: auto;
 	margin-right: auto;
 	height: 21.6em;
-	background: rgba(0, 0, 0, 0) url("../img/SurfaceStudio.jpg") no-repeat left top / 38.4em 21.6em;
+	background: rgba(0, 0, 0, 0) url("../img/SurfaceStudio.png") no-repeat left top / 38.4em 21.6em;
 }
 
 pre.numbers {
