@@ -9,7 +9,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Untitled Document</title>
-<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="/css/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/css/msg.css">
+<link rel="stylesheet" href="/css/mCustomScrollbar.min.css"/>
+<link rel="stylesheet" href="/css/emoji.css"/>
 <!-- 
 To learn more about the conditional comments around the html tags at the top of the file:
 paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
@@ -30,12 +33,34 @@ Do the following if you're using your customized build of modernizr (http://www.
 		<% include header.html %>
     </div>
 	
+	<div class="inputgroup">
+		<div class="pad-10">
+			<div>
+				<p>既然来了，就给我留个言吧？<span id="reminder"></span></p>
+			</div>
+			<textarea id="input"></textarea>
+			<span id="sbutton" class="con-go">发布</span>
+		</div>
+	</div>
+	
+	<div id="content">
+		<ul id="con-ul">
+		
+		</ul>
+	</div>
+	
     <div class="row">
         <div class="footer">
         	
         </div>
     </div>
 </div>
+
+<script src="/js/jquery-2.2.4.min.js"></script>
+<script src="/js/jquery.mousewheel-3.0.6.min.js"></script>
+<script src="/js/jquery.mCustomScrollbar.min.js"></script>
+<script src="/js/jquery.emoji.min.js"></script>
+<script src="/js/msg.js"></script>
 
 </body>
 </html>

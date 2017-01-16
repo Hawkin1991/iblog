@@ -1,0 +1,132 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: '微软雅黑';
+	list-style: none;
+}
+
+body {
+	background: #FAFAFA;
+	margin-top: 120px;
+}
+
+.inputgroup {
+	position: relative;
+	max-width: 600px;
+	background: #FFFFFF;
+	padding: 15px 0 10px 0;
+	margin: 0 auto;
+	border-radius: 2px;
+}
+.inputgroup p {
+	font-size: 16px;	
+}
+
+.pad-10 {
+	padding: 0 10px;
+}
+
+.con-go {
+	width: 80px;
+	height: 28px;
+	background: #2196f3;
+	font-size: 14px;
+	line-height: 28px;
+	display: inline-block;
+	border-radius: 2px;
+	text-align: center;
+	position: absolute;
+	bottom: 16px;
+	right: 20px;
+	color: #fff;
+	cursor: pointer;
+}
+
+#input {
+	display: block;
+	width:100%;
+	margin: 10px 0 43px 0;
+	height: 80px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	resize:none;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+		box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+		-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+		transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    /* height: 80px; */
+    /* background-color: #fff; */
+    /* border: 1px solid #ccc; */
+    /* border-radius: 2px; */
+    /* box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset; */
+    /* color: #555; */
+    /* display: block; */
+    /* line-height: 1.42857; */
+    /* padding: 6px 12px; */
+    /* transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s; */
+	/* margin: 10px 0 43px 0; */
+}
+
+#input:focus {
+    border-color: #66afe9;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
+    outline: 0 none;
+}
+
+#reminder {
+	float: right;
+	top: 0px;
+}
+
+#content {
+	width: 600px;
+	margin: 0px auto 30px auto;
+	position: relative;
+	overflow: hidden;
+}
+#content li {
+	display: table;
+	width: 600px;
+	background: #fff;
+	margin-top: 10px;
+	border-radius: 2px;
+	padding: 10px;
+	border: 1px solid #ccc;
+}
+#content li .icon {
+	width: 64px;
+	height: 64px;
+	border-radius: 32px;
+	overflow: hidden;
+	position: absolute;
+}
+.icon img {
+	width: 64px;
+	height: 64px;
+}
+#content li h2 {
+	font-size: 16px;
+	margin-top: 10px;
+	margin-left: 90px;
+}
+#content .text {
+	color: #444;
+	width: 470px;
+	font-size: 14px;
+	float: none;
+	margin-top: 10px;
+	margin-left: 90px;
+}
+#content .time {
+	font-size: 14px;
+	margin-top: 10px;
+	margin-left: 90px;
+	color: #888;
+}

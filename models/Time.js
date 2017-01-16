@@ -1,7 +1,10 @@
 var timeDAO = function(){};
 
-timeDAO.prototype.updateDatetimeWithNow = function(data, callback) {
-	var now = new Date();
+timeDAO.prototype.getDate = function(now, datetime, callback) {
+	
+};
+
+timeDAO.prototype.getTime = function(now, datetime, callback) {
 	
 };
 

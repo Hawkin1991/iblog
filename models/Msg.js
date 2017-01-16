@@ -1,5 +1,4 @@
 var mongodb = require('./mongodb');
-var moment = require("moment");
 var mongoose = mongodb.mongoose;
 var Schema = mongoose.Schema;
 
@@ -8,10 +7,13 @@ var ObjectId = Schema.Types.ObjectId;
 var msgSchema = new Schema({
 	uin: String,
 	content : String,
-	datetime : { type: String, default: moment(new Date()).format('YYYY-MM-DD HH:mm:ss') },
+	date : String,
+	time : String,
 	replies : [{suin: String,
 				ruin: String,
-				datetime: { type: String, default: moment(new Date()).format('YYYY-MM-DD HH:mm:ss') },
+				// datetime: { type: String, default: moment(new Date()).format('YYYY-MM-DD HH:mm:ss') },
+				date : String,
+				time : String,
 				content: String}]
 });
 
